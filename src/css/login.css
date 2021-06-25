@@ -1,0 +1,100 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-design-container {
+  flex: 2;
+  background-color: burlywood;
+  height: 100vh;
+}
+.login-container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 16px 20px 0px rgb(0 0 0/40%);
+  padding: 50px;
+  border-radius: 10px;
+  /* flex: 1; */
+}
+.welcome-h1-style {
+  margin: 0px;
+  display: "flex";
+  text-align: left;
+  font-weight: 300;
+}
+.h1-style {
+  margin: 0px;
+  display: "flex";
+  text-align: left;
+  font-weight: 500;
+  margin-left: 2px;
+}
+.username-container {
+  display: flex;
+}
+.username-input-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin-top: 30px;
+}
+.passoword-input-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin-top: 30px;
+}
+.login-button-container {
+  display: flex;
+  padding: 10px;
+  margin-top: 30px;
+  justify-content: center;
+}
+.log-button-container {
+  width: 100px;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: "Fira Sans", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0px 16px 20px 0px rgb(0 0 0/40%);
+  user-select: none;
+  cursor: pointer;
+}
+.log-button-container:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button-container:hover {
+  background-color: rgb(61 61 61);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button:hover {
+  padding-right: 25px;
+}
+
+.button:hover:after {
+  opacity: 1;
+  right: 0;
+}
+.error-span {
+  color: red;
+  display: flex;
+  margin-top: 20px;
+  opacity: 0.7;
+}

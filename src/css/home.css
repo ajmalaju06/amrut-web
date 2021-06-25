@@ -1,0 +1,75 @@
+.home-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 82px);
+}
+.side-bar {
+  min-width: 250px;
+  box-shadow: 0px 1px 10px 0px gray;
+  height: 100vh;
+}
+.excel-container {
+  flex: 1;
+  padding: 30px;
+  overflow: auto;
+}
+.search-box {
+  display: flex;
+  padding: 5px;
+  box-shadow: 0px 1px 5px 0px gray;
+  border-radius: 4px;
+}
+.side-bar ul {
+  list-style: none;
+  padding: 0px;
+}
+.side-bar ul li {
+  text-align: left;
+  padding: 10px;
+  border-bottom: solid 1px #efefef;
+  font-size: 13px;
+  cursor: pointer;
+}
+.side-bar ul li:hover {
+  font-weight: bold;
+}
+.side-bar ul li.active {
+  background: whitesmoke;
+  font-weight: bold;
+}
+.date-picker-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 30px;
+}
+.heading-name-style {
+  flex: 1;
+  padding: 0px;
+  text-align: left;
+}
+.table-container {
+  width: "100%";
+  margin-top: 20px;
+}
+.table-style {
+  width: 100%;
+}
+table thead tr th {
+  padding: 10px;
+  border: 1px solid #efefef;
+}
+table tbody tr td {
+  border: 1px solid #efefef;
+  padding: 5px;
+}
+.button-container {
+  width: 110px;
+  height: 32px;
+  color: white;
+  background-color: black;
+  border-radius: 3px;
+}
+.button-txt {
+  margin-top: 5px;
+  display: block;
+}

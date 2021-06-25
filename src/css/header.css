@@ -1,0 +1,9 @@
+.header-container {
+  padding: 15px;
+  background-color: black;
+}
+.header-container .heading-text {
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+}
