@@ -16,7 +16,11 @@ function Home() {
   const [salesData, setSalesData] = useState([]);
 
   useEffect(() => {
-    menuClick(selectedItem);
+    if (selectedItem === 0) {
+      getsales();
+    } else {
+      getcustomer();
+    }
   }, [selectedItem]);
 
   const getsales = async () => {
@@ -36,14 +40,6 @@ function Home() {
       setSalesData(data.data);
     } else {
       alert("No records");
-    }
-  };
-
-  const menuClick = (index) => {
-    if (index === 0) {
-      getsales();
-    } else {
-      getcustomer();
     }
   };
 
