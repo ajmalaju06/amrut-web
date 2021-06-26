@@ -7,10 +7,6 @@ import "antd/dist/antd.css";
 import salesApi from "../api/sales";
 import customerApi from "../api/customerData";
 
-function onChange(date, dateString) {
-  console.log(date, dateString);
-}
-
 function Home() {
   const [selectedItem, setSelectedItem] = useState(0);
   const [salesData, setSalesData] = useState([]);
@@ -31,6 +27,10 @@ function Home() {
     } else {
       alert("No records");
     }
+  };
+
+  const onChange = (date, dateString) => {
+    console.log(date, dateString);
   };
 
   const getcustomer = async () => {
