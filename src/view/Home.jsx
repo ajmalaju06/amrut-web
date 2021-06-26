@@ -14,11 +14,10 @@ function onChange(date, dateString) {
 function Home() {
   const [selectedItem, setSelectedItem] = useState(0);
   const [salesData, setSalesData] = useState([]);
-  const [customerdata, setCustomerData] = useState([]);
 
   useEffect(() => {
-    menuClick(0);
-  }, []);
+    menuClick(selectedItem);
+  }, [selectedItem]);
 
   const getsales = async () => {
     const data = await salesApi.getSalesData();
@@ -46,7 +45,6 @@ function Home() {
     } else {
       getcustomer();
     }
-    setSelectedItem(index);
   };
 
   return (
@@ -60,7 +58,7 @@ function Home() {
               {designationData.map((e, index) => {
                 const active = selectedItem === index ? "active" : "";
                 return (
-                  <li className={active} onClick={() => menuClick(index)}>
+                  <li className={active} onClick={() => setSelectedItem(index)}>
                     <span>{e.name}</span>
                   </li>
                 );
