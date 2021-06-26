@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/login.css";
-import authApi from "../api/loginRequest";
+import { loginUser } from "../api/loginRequest";
 
 function Login({ history }) {
   const [model, setModel] = useState({
@@ -20,7 +20,7 @@ function Login({ history }) {
   };
 
   const loginForm = async (model) => {
-    const data = await authApi.loginUser(model);
+    const data = await loginUser(model);
     console.log(data.success);
 
     if (data.success) {

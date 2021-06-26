@@ -1,6 +1,6 @@
 import { post } from "./requestManager";
 
-const loginUser =  async(values) => {
+export const loginUser =  async(values) => {
   try {
     const { data } = await post("/login", values);
     return data;
@@ -8,7 +8,3 @@ const loginUser =  async(values) => {
     return error;
   }
 },
-
-export default {
-  loginUser,
-};

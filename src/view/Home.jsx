@@ -4,8 +4,8 @@ import "../css/home.css";
 import { designationData } from "../datas/data";
 import { DatePicker } from "antd";
 import "antd/dist/antd.css";
-import salesApi from "../api/sales";
-import customerApi from "../api/customerData";
+import { getSalesData } from "../api/sales";
+import { getCustomerData } from "../api/customerData";
 
 function Home() {
   const [selectedItem, setSelectedItem] = useState(0);
@@ -20,7 +20,7 @@ function Home() {
   }, [selectedItem]);
 
   const getsales = async () => {
-    const data = await salesApi.getSalesData();
+    const data = await getSalesData();
     console.log(data.data);
     if (data.success) {
       setSalesData(data.data);
@@ -34,7 +34,7 @@ function Home() {
   };
 
   const getcustomer = async () => {
-    const data = await customerApi.getCustomerData();
+    const data = await getCustomerData();
     console.log(data.data);
     if (data.success) {
       setSalesData(data.data);
