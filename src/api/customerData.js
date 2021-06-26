@@ -1,6 +1,6 @@
 import { post } from "./requestManager";
 
-const getCustomerData = (values) => {
+const getCustomerData = async(values) => {
   try {
     const { data } = await post("/get-customer", values);
     return data;
@@ -9,4 +9,6 @@ const getCustomerData = (values) => {
   }
 },
 
-export default getCustomerData;
+export default {
+  getCustomerData,
+};

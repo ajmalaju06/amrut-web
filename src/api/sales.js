@@ -9,4 +9,6 @@ const getSalesData = async(values) => {
   }
 },
 
-export default getSalesData;
+export default {
+  getSalesData,
+};

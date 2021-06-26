@@ -9,4 +9,6 @@ const loginUser =  async(values) => {
   }
 },
 
-export default loginUser;
+export default {
+  loginUser,
+};
